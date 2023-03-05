@@ -1,0 +1,13 @@
+@import "./colors.module.css";
+
+.datePicker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dates {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}

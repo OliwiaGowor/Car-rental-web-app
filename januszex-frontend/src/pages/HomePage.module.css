@@ -1,0 +1,27 @@
+@import "../components/colors.module.css";
+
+.homePage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--background);
+    color: var(--text);
+    padding: 0;
+    margin-top: 120px; 
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 65%;
+}
+
+.cardsContainer{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+

@@ -1,0 +1,13 @@
+@import "./colors.module.css";
+
+li {
+    padding: 0.5em;
+}
+
+.btnSubmit {
+    background-color: var(--not-member);
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
