@@ -1,0 +1,113 @@
+@import "../components/colors.module.css";
+
+.reservationPage {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.container {
+  display: flex;
+  width: 65%;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 100px;
+}
+
+textarea {
+  resize: none;
+}
+
+.resForm {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  margin-top: -23px;
+}
+
+.line {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--text);
+  opacity: 30%;
+  margin: 10px 0px;
+}
+
+.header {
+  text-align: center;
+}
+
+.piForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formElem {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 50px));
+  align-items: center;
+  column-gap: 100px;
+}
+
+.reservationPage label {
+  margin-top: 20px;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reservBtn {
+  background-color: var(--not-member);
+  padding: 10px 30px;
+  width: min-content;
+  border-radius: 10px;
+}
+
+.reservBtn:hover {
+  background-color: var(--button-idle);
+  color: var(--not-member);
+}
+
+.required {
+  margin-top: -30px;
+  width: 100%;
+}
+
+.required h3 {
+  margin-bottom: -5px;
+}
+
+.reservationPage h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.reservationPage input,
+.reservationPage textarea {
+  background-color: var(--text);
+}
+
+.errorContainerInvisible {
+  display: none;
+}
+
+.errorContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: var(--not-member);
+  font-weight: bold;
+}

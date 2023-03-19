@@ -1,0 +1,50 @@
+@import "./colors.module.css";
+
+li {
+  padding: 0.5em;
+}
+
+.btnSubmit {
+  background-color: var(--not-member);
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.btnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btnSubmit:hover {
+  background-color: var(--button-idle);
+  color: var(--not-member);
+}
+
+.errorContainerInvisible {
+  display: none;
+}
+
+.errorContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: var(--not-member);
+  font-weight: bold;
+}
+
+.formElements {
+  display: grid;
+  grid-template-columns: repeat(2, 12em);
+}
+
+.formElements input {
+  background-color: var(--text);
+}

@@ -1,0 +1,43 @@
+@import "../components/colors.module.css";
+
+.damagemsgCss {
+  width: 40%;
+  resize: none;
+  height: 20vw;
+  font-size: 30px;
+}
+
+.reservationNumberCss {
+  width: 40%;
+  font-size: 30px;
+}
+
+.communicatsCss {
+  font-size: 40px;
+}
+
+.titleCommunicatsCss {
+  font-size: 60px;
+  font-weight: 600;
+  margin: 2%;
+}
+
+.parentCss {
+  text-align: center;
+  height: 80vh;
+  width: 100%;
+  margin-top: 120px;
+}
+
+.buttonCss {
+  background: var(--not-member);
+  border: none;
+  color: var(--text);
+  font-size: 2em;
+  padding: 20px 50px;
+}
+
+.parentCss textarea,
+.parentCss input {
+  background-color: var(--text);
+}

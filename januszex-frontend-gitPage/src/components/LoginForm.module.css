@@ -1,0 +1,67 @@
+.loginForm {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.loginForm h1 {
+  text-align: center;
+}
+
+.loginFormContainer {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loginFormContainer input {
+  width: 18vw;
+  padding: 7px;
+  margin-bottom: 20px;
+}
+
+.errorContainerInvisible {
+  display: none;
+}
+
+.errorContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: var(--not-member);
+  font-weight: bold;
+}
+
+.btnSubmit {
+  background-color: var(--not-member);
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.btnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.btnSubmit:hover {
+  background-color: var(--button-idle);
+  color: var(--not-member);
+}
+
+.loginForm input {
+  background-color: var(--text);
+}

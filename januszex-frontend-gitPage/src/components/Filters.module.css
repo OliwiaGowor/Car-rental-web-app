@@ -1,0 +1,84 @@
+.filterCont {
+  background-color: var(--button-idle);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.filtersTitle {
+  font-size: 36px;
+  margin-left: 20px;
+  margin-top: 5px;
+  font-weight: bolder;
+}
+
+.parametersTitle,
+.priceTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.line {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--text);
+  opacity: 30%;
+  margin: 10px 0px;
+}
+
+.filterButton {
+  padding: 10px 30px;
+  background-color: var(--not-member);
+  border-radius: 10px;
+}
+
+.filterButton:hover {
+  color: var(--not-member);
+  background-color: var(--background);
+}
+
+.minMaxText {
+  width: 60px;
+  font-size: 1em;
+}
+
+.select {
+  width: 60%;
+  font-size: 1em;
+  margin-left: 20px;
+  background-color: var(--text);
+}
+
+.maxInputCss {
+  flex-grow: 1;
+  height: 15px;
+  background-color: var(--text);
+  border: none;
+}
+
+.minInputCss {
+  flex-grow: 1;
+  height: 15px;
+  background-color: var(--text);
+  border: none;
+  margin-left: 13px;
+}
+
+.singeRange {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filtersData {
+  font-size: 1em;
+  padding-top: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
