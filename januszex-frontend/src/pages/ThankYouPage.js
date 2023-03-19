@@ -1,8 +1,7 @@
 import React from "react";
 import classes from "./ThankYouPage.module.css";
 
-function ThankYouPage() {
-
+export default function ThankYouPage() {
     return (
         <div className={classes.thankYouPage}>
             <div className={classes.container}>
@@ -12,5 +11,3 @@ function ThankYouPage() {
         </div>
     );
 }
-
-export default ThankYouPage;

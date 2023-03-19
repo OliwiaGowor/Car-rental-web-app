@@ -3,11 +3,9 @@ import { useNavigate } from "react-router-dom";
 import classes from "./PaymentForm.module.css"
 
 function PaymentForm() {
-
     const navigate = useNavigate();
 
     function submitHandler() {
-        // Checking if user is not loggedIn 
         navigate("/thankYou");
     };
 

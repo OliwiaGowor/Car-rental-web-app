@@ -1,10 +1,10 @@
 :root {
-	--background: #05101f;
-	--text: #c5d1eb;
-	--top-panel: #141d2b;
-	--button-idle: #2d3646;
-	--button-hover: #202938;
-	--not-member: #d16060;
-	--text-edit: #05101f;
+  --background: #05101f;
+  --text: #c5d1eb;
+  --top-panel: #141d2b;
+  --button-idle: #2d3646;
+  --button-hover: #202938;
+  --not-member: #d16060;
+  --text-edit: #05101f;
   --info-border: #8b94a8;
 }

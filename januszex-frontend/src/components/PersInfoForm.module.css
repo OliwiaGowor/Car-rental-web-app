@@ -19,12 +19,11 @@ li {
 }
 
 .btnSubmit:hover {
-    background-color: var(--button-idle);
-    color: var(--not-member);
-  }
+  background-color: var(--button-idle);
+  color: var(--not-member);
+}
 
-
-.errorContainerInvisible{
+.errorContainerInvisible {
   display: none;
 }
 
@@ -33,7 +32,7 @@ li {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  margin-bottom: 10px;  
+  margin-bottom: 10px;
 }
 
 .error {

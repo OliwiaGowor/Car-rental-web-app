@@ -13,7 +13,7 @@ const AboutUs =()=> {
             <div className={classes.phoneCss}>Telefon kontaktowy: 213 769 420</div>
             <div className={classes.container}>
                 <div className={classes.image}>
-                    <img src="https://raw.githubusercontent.com/JayJaySea/Januszex/FrontendPrzemek/BogatyJanusz.png" alt="Tu powinno być nasze logo" crossorigin></img>
+                    <img src="https://raw.githubusercontent.com/JayJaySea/Januszex/FrontendPrzemek/BogatyJanusz.png" alt="Logo firmy" crossorigin></img>
                 </div>
                 <div className={classes.text}>
                     <p className={classes.header}>
@@ -22,8 +22,7 @@ const AboutUs =()=> {
                     <p className={classes.about}>
                     Januszex to wypożyczalnia samochodów, która oferuje swoim klientom nie tylko wyjątkowo atrakcyjne ceny, ale również niezwykle szeroki wybór samochodów. Każdy z nich jest regularnie serwisowany i zapewnia nie tylko wysoki poziom bezpieczeństwa, ale również komfort jazdy. Personel wypożyczalni jest bardzo pomocny i zawsze chętnie doradzi w wyborze najlepszego samochodu dla klienta. W Januszex można być pewnym, że wynajem samochodu będzie przebiegał sprawnie i bezproblemowo. To miejsce, w którym wypożyczenie samochodu jest proste i przyjemne!
                     </p>
-                </div>
-                
+                </div>    
             </div>
             <div className={classes.mysteryButton}>
                     <button className={classes.hahaha}>

@@ -1,14 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { redirect, json, useRouteLoaderData, defer, useSubmit, Await } from "react-router-dom";
+import { json, useSubmit } from "react-router-dom";
 import AccountNav from "../components/AccountNav";
-import { getAuthToken } from '../util/auth';
 import classes from "./ResHistoryPage.module.css"
 
-function ResHistoryPage() {
+export default function ResHistoryPage() {
     const [reservations, setReservations] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
-    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const fetchReservationsHandler = useCallback(async () => {
         setIsLoading(true);
@@ -20,7 +18,6 @@ function ResHistoryPage() {
             }
 
             const data = await response.json();
-
             const loadedReserv = [];
 
             for (const key in data) {
@@ -36,7 +33,7 @@ function ResHistoryPage() {
             }
 
             setReservations(loadedReserv);
-            console.log(loadedReserv);
+
         } catch (error) {
             setError("Something went wrong, try again.");
         }
@@ -47,6 +44,7 @@ function ResHistoryPage() {
     }, [fetchReservationsHandler]);
 
     const current = new Date();
+
     function addZero(numb) {
         return (numb < 10) ? '0' : ''
     }
@@ -87,10 +85,7 @@ function ResHistoryPage() {
             </div>
         </div>
     );
-
 }
-
-export default ResHistoryPage;
 
 export async function action({ params, request }) {
     const method = request.method;
@@ -100,6 +95,7 @@ export async function action({ params, request }) {
     const idToSend = {
         id: parseInt(reservId)
     };
+
     const response = await fetch('/cancel_reservation', {
         method: 'PUT',
         headers: {
@@ -108,12 +104,10 @@ export async function action({ params, request }) {
         body: JSON.stringify(idToSend),
     });
 
-
     if (!response.ok) {
         throw json({ message: 'Something went wrong.' }, { status: 500 });
     }
-    localStorage.removeItem('resID');
-    //window.location.reload(true);
 
-    return null;//redirect('/events');
+    localStorage.removeItem('resID');
+    return null;
 }

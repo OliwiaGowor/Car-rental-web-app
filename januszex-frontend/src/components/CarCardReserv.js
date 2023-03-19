@@ -5,10 +5,9 @@ import { useState } from "react";
 
 
 const CarCard = ({ car, showButton }) => {
-
     const navigate = useNavigate();
     const { isButton, setIsButton } = useState(true);
-    //setIsButton(props.showButton);
+
     function clickHandler() {
         navigate("/reservation", { state: { showButton: false, car: car } });
     }
@@ -16,15 +15,10 @@ const CarCard = ({ car, showButton }) => {
     return (
         <div className={classes.cardContainer} >
             <div className={classes.card}>
-                {
-                    //<img src={car.photoURL} width="300" height={200} />
-                }
                 <img src={car.photoURL} className={classes.image} />
                 <div className={classes.info}>
                     <div className={classes.data}>
-                        <div className={classes.brandAndName}>
-                            {car.brand + " " + car.model}
-                        </div>
+                        <div className={classes.brandAndName}>{car.brand + " " + car.model}</div>
                         <div>{"Liczba miejsc: " + car.howManySeats}</div>
                         <div>{"Kolor: " + car.color}</div>
                         <div>{"Komfort: " + car.comfortScale}</div>

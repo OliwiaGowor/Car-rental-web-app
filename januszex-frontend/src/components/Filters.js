@@ -3,31 +3,26 @@ import classes from "./Filters.module.css";
 const BrandFilter = ({ car }) => {
     return (
         <option className={classes.option}>{car.brand}</option>
-
     )
 }
 const ModelFilter = ({ car }) => {
     return (
         <option className={classes.option}>{car.model}</option>
-
     )
 }
 const ComfortFilter = ({ car }) => {
     return (
         <option className={classes.option}>{car.comfortScale}</option>
-
     )
 }
 const ColorFilter = ({ car }) => {
     return (
         <option className={classes.option}>{car.color}</option>
-
     )
 }
 const SeatsFilter = ({ car }) => {
     return (
         <option className={classes.option}>{car.howManySeats}</option>
-
     )
 }
 

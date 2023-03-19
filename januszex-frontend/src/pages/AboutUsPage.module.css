@@ -1,76 +1,83 @@
-.parent{
-    height: auto;
-    width: 100%;
-    text-align: center;
-    display: inline-block;
-    margin-top: 70px;;
+.parent {
+  height: auto;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  margin-top: 70px;
 }
 
-.container{
-    display: flex;
-    height: auto;
-    width: 70%;
-    margin: 150px auto auto auto;
-}
-.container img{
-    height: auto;
-    width: 100%;
-}
-.container .text{
-    height: auto;
-    width: 100%;
-}
-.header{
-    padding: 0;
-    margin: 0;
-    font-size: 2em;
-    font-weight: 700;
-    color: #d16060;
-}
-.about{
-    padding: 0 20px 0 20px;
-    font-size: 1.5em;
+.container {
+  display: flex;
+  height: auto;
+  width: 70%;
+  margin: 150px auto auto auto;
 }
 
-.mysteryButton{
-    display: flex;
-    height: 200px;
-    width: 70%;
-    background-color: none;
-    margin: 50px auto auto auto;
-    
+.container img {
+  height: auto;
+  width: 100%;
 }
+
+.container .text {
+  height: auto;
+  width: 100%;
+}
+
+.header {
+  padding: 0;
+  margin: 0;
+  font-size: 2em;
+  font-weight: 700;
+  color: #d16060;
+}
+
+.about {
+  padding: 0 20px 0 20px;
+  font-size: 1.5em;
+}
+
+.mysteryButton {
+  display: flex;
+  height: 200px;
+  width: 70%;
+  background-color: none;
+  margin: 50px auto auto auto;
+}
+
 .mysteryButton button {
-    border-radius: 10px;
-    height: 7vw;
-    font-size: 1.7em;
-    width: 500px ;
-    color: white;
-    background-color: #d16060;
-}
-.hahaha{
-    margin-left: 150px;
-    left: 30%;
-}
-.hahaha2{
-    margin-left: 250px;
-    right: 30%;
-}
-.hahaha:hover{
-    visibility: hidden;
-    display: none;
-}
-.hahaha:active{
-
-    display: none;
-    visibility: hidden;
+  border-radius: 10px;
+  height: 7vw;
+  font-size: 1.7em;
+  width: 500px;
+  color: white;
+  background-color: #d16060;
 }
 
-.titleJanuszexCss{
-    margin-top: 30px;
-    font-size: 80px;
+.hahaha {
+  margin-left: 150px;
+  left: 30%;
 }
 
-.phoneCss{
-    margin-bottom: -100px;
+.hahaha2 {
+  margin-left: 250px;
+  right: 30%;
+}
+
+.hahaha:hover {
+  visibility: hidden;
+  display: none;
+}
+
+.hahaha:active {
+  display: none;
+  visibility: hidden;
+}
+
+.titleJanuszexCss {
+  margin-top: 30px;
+  font-size: 80px;
+}
+
+.phoneCss {
+  margin-bottom: -100px;
 }

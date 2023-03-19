@@ -1,14 +1,14 @@
 @import "./colors.module.css";
 
 .navContainer {
-    background-color: var(--button-idle);
-    border-radius: 10px;
-    padding: 15px;
-    height: min-content;
+  background-color: var(--button-idle);
+  border-radius: 10px;
+  padding: 15px;
+  height: min-content;
 }
 
 li {
-    padding: 10px 15px;
+  padding: 10px 15px;
 }
 
 .myAccount {
@@ -17,13 +17,13 @@ li {
 }
 
 button {
-    background: none;
-    border: none;
-    color: var(--text);
-    font-size: 1em;
-  }
-  
-  button:hover {
-    color: var(--not-member);
-    cursor: pointer;
-  }
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1em;
+}
+
+button:hover {
+  color: var(--not-member);
+  cursor: pointer;
+}

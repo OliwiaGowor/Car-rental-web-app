@@ -6,7 +6,7 @@ import classes from "./ReservationPage.module.css";
 
 function ReservationPage(props) {
 
-    const token = localStorage.getItem("ifLogged"); //useRouteLoaderData('root');
+    const token = localStorage.getItem("ifLogged");
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -59,7 +59,7 @@ function ReservationPage(props) {
             setData(response);
             alert('Coś poszło nie tak');
             return
-          }    
+        }
 
         navigate("/payment", { state: { numbOfDays: (Date.parse(dates.endDate.slice(8, 10)) - parseInt(dates.startDate.slice(8, 10))), price: carData.price } });
     }

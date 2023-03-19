@@ -47,7 +47,6 @@
   list-style: none;
   align-items: center;
   padding: 0;
-
 }
 
 .rightIcons li {
@@ -101,7 +100,7 @@
   align-items: center;
 }
 
-.leftIcons li{
+.leftIcons li {
   margin: 0 10px;
   width: max-content;
 }

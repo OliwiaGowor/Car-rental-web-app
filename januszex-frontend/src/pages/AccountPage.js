@@ -1,17 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { redirect, json, useSubmit } from "react-router-dom";
 import PersInfoPanel from "../components/PersInfoPanel";
-import { getAuthToken } from '../util/auth';
 import AccountNav from "../components/AccountNav";
 import classes from "./AccountPage.module.css"
 
 function AccountPage() {
-
-  //const { user } = useRouteLoaderData('user-detail');
-
-  const token = localStorage.getItem('isLogged');//useRouteLoaderData('root');
+  const token = localStorage.getItem('isLogged');
   const submit = useSubmit();
-
   const [user, setUser] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -34,11 +29,9 @@ function AccountPage() {
     setIsLoading(false);
   }, []);
 
-
   useEffect(() => {
     fetchUserHandler();
   }, [fetchUserHandler]);
-
 
   function startDeleteHandler() {
     const proceed = window.confirm('Czy jesteś pewny?');
@@ -47,7 +40,6 @@ function AccountPage() {
       submit(null, { method: 'delete' });
     }
   }
-
 
   return (
     <div className={classes.accountContainer}>
@@ -65,7 +57,6 @@ export default AccountPage;
 
 export async function action({ params, request }) {
   const userId = params.id;
-
 
   const response = await fetch('/delete_account', {
     method: request.method,

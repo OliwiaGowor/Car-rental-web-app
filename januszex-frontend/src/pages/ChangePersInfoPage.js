@@ -1,17 +1,13 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { redirect, json, useSubmit } from "react-router-dom";
+import { json, useSubmit } from "react-router-dom";
 import PersInfoForm from "../components/PersInfoForm";
-import { getAuthToken } from '../util/auth';
 import AccountNav from "../components/AccountNav";
 import classes from "./ChangePersInfoPage.module.css"
 
 function ChangePersInfoPage() {
 
-  //const { user } = useRouteLoaderData('user-detail');
-
-  const token = localStorage.getItem('isLogged');//useRouteLoaderData('root');
+  const token = localStorage.getItem('isLogged');
   const submit = useSubmit();
-
   const [user, setUser] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -53,42 +49,35 @@ function ChangePersInfoPage() {
 
 export default ChangePersInfoPage;
 
-
 export async function action({ request }) {
-    const method = request.method;
+  const method = request.method;
+  const data = await request.formData();
+  const newData = {
+    name: data.get("name"),
+    surname: data.get("surname"),
+    email: data.get("email"),
+    login: data.get("username"),
+    password: data.get("password"),
+    drivingLicense: data.get("drivingLicense"),
+    licCategoryNumber: data.get("licCategoryNumber"),
+  };
 
-    const data = await request.formData();
-    console.log(data);
+  const response = await fetch('/profile', {
+    method: method,
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newData),
+  });
 
+  if (response.status === 422 || response.status === 400) {
+    return response;
+  }
 
-    const newData = {
-        name: data.get("name"),
-        surname: data.get("surname"),
-        email: data.get("email"),
-        login: data.get("username"),
-        password: data.get("password"),
-        drivingLicense: data.get("drivingLicense"),
-        licCategoryNumber: data.get("licCategoryNumber"),
-      };
-      console.log(newData);
+  if (!response.ok) {
+    throw json({ message: 'Something went wrong.' }, { status: 500 });
+  }
 
-    const response = await fetch('/profile', { //http://localhost:8080/' + mode
-        method: method,
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(newData),
-    });
-
-
-    if (response.status === 422 || response.status === 400) {
-        return response;
-      }
-
-    if (!response.ok) {
-        throw json({ message: 'Something went wrong.' }, { status: 500 });
-    }
-
-    alert('Dane zmienione');
-    return null;//redirect('/');
+  alert('Dane zmienione');
+  return null;
 }

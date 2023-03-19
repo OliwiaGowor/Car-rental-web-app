@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { redirect, json, useRouteLoaderData, defer, useSubmit, Await } from "react-router-dom";
 import AccountNav from "../components/AccountNav";
-import { getAuthToken } from '../util/auth';
 import classes from "./LoyalityCardPage.module.css"
-
 
 function LoyalityCard() {
     const [cardData, setCardData] = useState([]);

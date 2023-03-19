@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 function RootLayout() {
   const token = useLoaderData();
   const submit = useSubmit();
-  // const navigation = useNavigation();
+
   useEffect(() => {
     if (!token) {
       return;
@@ -18,7 +18,6 @@ function RootLayout() {
     }
 
     const tokenDuration = getTokenDuration();
-    console.log(tokenDuration);
 
     setTimeout(() => {
       submit(null, { action: '/logout', method: 'post' });
@@ -29,7 +28,6 @@ function RootLayout() {
     <>
       <Navbar />
       <main>
-        {/* {navigation.state === 'loading' && <p>Loading...</p>} */}
         <Outlet />
       </main>
     </>

@@ -1,97 +1,95 @@
-
 .signUpForm {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 90px;
 }
 
 .container {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header {
-    text-align: center;
+  text-align: center;
 }
 
 .signUpForm form {
-    width: 100%;
+  width: 100%;
 }
 
 .signUpForm input {
-    padding: 7px;
-    background-color: var(--text);
+  padding: 7px;
+  background-color: var(--text);
 }
 
 .accountInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .accountInfo input {
-    width: 18vw;
-    margin-bottom: 30px;
+  width: 18vw;
+  margin-bottom: 30px;
 }
 
 .formElem {
-    display: grid;
-    grid-template-columns: repeat(2, calc(50% - 50px));
-    align-items: center;
-    column-gap: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 50px));
+  align-items: center;
+  column-gap: 100px;
 }
 
 .btnContainer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .btnSubmit {
-    background-color: var(--not-member);
-    padding: 10px 30px;
-    border-radius: 10px;
+  background-color: var(--not-member);
+  padding: 10px 30px;
+  border-radius: 10px;
 }
 
 .btnSubmit:hover {
-    background-color: var(--button-idle);
-    color: var(--not-member);
-    padding: 10px 30px;
-    border-radius: 10px;
+  background-color: var(--button-idle);
+  color: var(--not-member);
+  padding: 10px 30px;
+  border-radius: 10px;
 }
 
 .line {
-    display: block;
-    height: 2px;
-    width: 100%;
-    background-color: var(--text);
-    opacity: 30%;
-    margin: 10px 0px;
-  }
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--text);
+  opacity: 30%;
+  margin: 10px 0px;
+}
 
-  .errorContainerInvisible{
-    display: none;
-  }
-  
-  .errorContainer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 10px;  
-  }
-  
-  .error {
-    color: var(--not-member);
-    font-weight: bold;
-  }
-  
+.errorContainerInvisible {
+  display: none;
+}
+
+.errorContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: var(--not-member);
+  font-weight: bold;
+}

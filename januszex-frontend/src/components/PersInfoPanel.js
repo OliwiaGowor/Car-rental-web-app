@@ -2,8 +2,6 @@ import React from "react";
 import classes from "./PersInfoPanel.module.css";
 
 function PresInfoPanel({ user }) {
-
-  console.log(user);
   return (
     <div className={classes.panelContainer}>
       <ul>
@@ -14,7 +12,6 @@ function PresInfoPanel({ user }) {
         <li className="driving-license">Numer prawa jazdy: {user.drivLic}</li>
         <li className="lic-categ">Kategoria prawa jazdy: {user.licCateg}</li>
       </ul>
-
     </div>
   );
 }

@@ -1,28 +1,26 @@
 import classes from "./DamagesPage.module.css";
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 function DamagesPage() {
-
     const navigate = useNavigate();
-  const reserveIDRef = useRef('');
-  const damageRef = useRef('');
+    const reserveIDRef = useRef('');
+    const damageRef = useRef('');
 
+    async function submitHandler(e) {
+        e.preventDefault();
+        const tmpData = {
+            description: damageRef.current.value
+        }
 
-  async function submitHandler(e) {
-    e.preventDefault();
-    const tmpData = {
-        description: damageRef.current.value
+        const response = await fetch('/report_damage', {
+            method: 'POST',
+            body: JSON.stringify(tmpData),
+            headers: { 'Content-type': 'application/json' }
+        });
+        const data = await response.json();
+        navigate("/");
     }
-    
-    const response = await fetch('/report_damage', {
-        method: 'POST',
-        body: JSON.stringify(tmpData),
-        headers: { 'Content-type': 'application/json' }
-    });
-    const data = await response.json();
-    navigate("/");
-}
 
     return (
         <div className={classes.parentCss}>
@@ -38,7 +36,7 @@ function DamagesPage() {
                     <label className={classes.communicatsCss} htmlFor="damage-msg">Proszę opisać usterkę</label>
                     <br></br>
                     <br></br>
-                    <textarea className={classes.damagemsgCss} placeholder="Pole do opisu usterke" rows="10" ref={damageRef} required></textarea>
+                    <textarea className={classes.damagemsgCss} placeholder="Pole do opisu usterki" rows="10" ref={damageRef} required></textarea>
                     <br></br>
                     <br></br>
                     <button className={classes.buttonCss}>Wyślij</button>

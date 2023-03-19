@@ -4,7 +4,6 @@ import PaymentForm from "../components/PaymentForm";
 import classes from "./PaymentPage.module.css";
 
 function PaymentPage() {
-
     const location = useLocation();
 
     return (

@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import { json, Form, useActionData } from "react-router-dom"
+import React from "react";
+import { Form, useActionData } from "react-router-dom"
 import classes from "./PersInfoForm.module.css";
 
 function PresInfoPanel({ user, method }) {
@@ -24,8 +24,14 @@ function PresInfoPanel({ user, method }) {
           <label htmlFor="password">Hasło:</label>
           <input type='password' name="password" id="password" required></input>
         </div>
-        <div className={(data && data.error) ? classes.errorContainer : classes.errorContainerInvisible}>{data && data.error && <div className={classes.error}>{data.error}</div>}</div>
-        <div className={classes.btnContainer}><button className={classes.btnSubmit}>Zmień dane</button></div>
+        <div className={(data && data.error) ? classes.errorContainer : classes.errorContainerInvisible}>
+          {data &&
+            data.error && <div className={classes.error}>{data.error}
+            </div>}
+        </div>
+        <div className={classes.btnContainer}>
+          <button className={classes.btnSubmit}>Zmień dane</button>
+        </div>
       </Form>
     </div>
   );

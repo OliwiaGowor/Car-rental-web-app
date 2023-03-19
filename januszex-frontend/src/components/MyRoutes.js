@@ -1,24 +1,22 @@
 import React from 'react';
 import HomePage from "../pages/HomePage";
-// importing components from react-router-dom package
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import ReservationPage from "../pages/ReservationPage";
 import PaymentPage from '../pages/PaymentPage';
 import AccountPage, {
-  loader as userDetailLoader,
   action as deleteUserAction,
 } from "../pages/AccountPage"
 import RootLayout from '../pages/Root';
 import SignPage, { action as signAction } from '../pages/SignPage';
 import LoginPage, { action as loginAction } from '../pages/LoginPage';
 import { action as logoutAction } from '../pages/LogoutPage';
-import { checkAuthLoader, tokenLoader } from '../util/auth.js';
-import ResHistoryPage, {action as deleteReservationAction} from '../pages/ResHistoryPage';
+import { tokenLoader } from '../util/auth.js';
+import ResHistoryPage, { action as deleteReservationAction } from '../pages/ResHistoryPage';
 import DamagesPage from '../pages/DamagesPage';
 import LoyalityCardPage from '../pages/LoyalityCardPage';
 import ThankYouPage from '../pages/ThankYouPage';
 import AboutUsPage from '../pages/AboutUsPage';
-import ChangePersInfoPage, {action as changePersInfo} from '../pages/ChangePersInfoPage';
+import ChangePersInfoPage, { action as changePersInfo } from '../pages/ChangePersInfoPage';
 
 function MyRoutes() {
 
@@ -50,8 +48,6 @@ function MyRoutes() {
         },
         {
           path: '/account',
-          //id: 'user-detail',
-          //loader: userDetailLoader,
           children: [
             {
               index: true,
@@ -93,7 +89,6 @@ function MyRoutes() {
       ],
     },
   ]);
-
 
   return (
     <RouterProvider router={router} />
