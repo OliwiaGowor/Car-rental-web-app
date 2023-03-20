@@ -45,7 +45,7 @@ function SignUpForm({ method }) {
               {isSubmitting ? "Rejestrowanie..." : "Zarejestruj się"}
             </button>
           </div>
-          <div className={classes.btnContainer}><Link to={'/login'}>Masz już konto? Kliknij tu i zaloguj się!</Link></div>
+          <div className={classes.btnContainer}><Link to={'/Car-rental-web-app/login'}>Masz już konto? Kliknij tu i zaloguj się!</Link></div>
         </Form>
       </div>
     </div>

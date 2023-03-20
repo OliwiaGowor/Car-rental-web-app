@@ -7,7 +7,7 @@ const CarCard = ({ car, showButton }) => {
     const { isButton, setIsButton } = useState(true);
 
     function clickHandler() {
-        navigate("/reservation", { state: { showButton: false, car: car } });
+        navigate("/Car-rental-web-app/reservation", { state: { showButton: false, car: car } });
     }
 
     return (

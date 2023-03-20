@@ -6,7 +6,7 @@ function PaymentForm() {
     const navigate = useNavigate();
 
     function submitHandler() {
-        navigate("/thankYou");
+        navigate("/Car-rental-web-app/thankYou");
     };
 
     return (

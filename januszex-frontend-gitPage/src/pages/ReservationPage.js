@@ -9,12 +9,10 @@ function ReservationPage(props) {
     const token = localStorage.getItem("ifLogged");
     const location = useLocation();
     const navigate = useNavigate();
-
     const [reservData, setReservData] = useState('');
     const [carData, setCarData] = useState(location.state?.car ?? {});
     const [dates, setDates] = useState('');
     const [data, setData] = useState();
-
     const nameRef = useRef('');
     const surnameRef = useRef('');
     const emailRef = useRef('');
@@ -53,7 +51,6 @@ function ReservationPage(props) {
             body: JSON.stringify(!token ? all : reservData),
             headers: { 'Content-type': 'application/json' }
         });
-        const data = await response.json();
 
         if (response.status === 422 || response.status === 400) {
             setData(response);
@@ -61,7 +58,7 @@ function ReservationPage(props) {
             return
         }
 
-        navigate("/payment", { state: { numbOfDays: (Date.parse(dates.endDate.slice(8, 10)) - parseInt(dates.startDate.slice(8, 10))), price: carData.price } });
+        navigate("/Car-rental-web-app/payment", { state: { numbOfDays: (Date.parse(dates.endDate.slice(8, 10)) - parseInt(dates.startDate.slice(8, 10))), price: carData.price } });
     }
 
     return (

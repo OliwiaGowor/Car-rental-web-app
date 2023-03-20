@@ -5,9 +5,7 @@ import Filters from "../components/Filters"
 import {carsStatic} from '../components/cars';
 
 function HomePage() {
-
     const [filters, setFilters] = useState(false);
-
     const [cars, setCars] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -48,9 +46,6 @@ function HomePage() {
     useEffect(() => {
         fetchReservationsHandler();
     }, [fetchReservationsHandler]);
-
-
-
 
     const filterChanged = (filters) => {
         setItems(prev => {

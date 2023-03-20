@@ -5,6 +5,7 @@ import ReservationPage from "../pages/ReservationPage";
 import PaymentPage from '../pages/PaymentPage';
 import AccountPage, {
   action as deleteUserAction,
+  loader as userLoader,
 } from "../pages/AccountPage"
 import RootLayout from '../pages/Root';
 import SignPage, { action as signAction } from '../pages/SignPage';
@@ -29,25 +30,27 @@ function MyRoutes() {
       children: [
         { index: true, element: <HomePage /> },
         {
-          path: '/sign',
+          path: '/Car-rental-web-app/sign',
           element: <SignPage />,
           action: signAction,
         },
         {
-          path: '/login',
+          path: '/Car-rental-web-app/login',
           element: <LoginPage />,
           action: loginAction,
         },
         {
-          path: '/reservation',
+          path: '/Car-rental-web-app/reservation',
           element: <ReservationPage />,
         },
         {
-          path: '/payment',
+          path: '/Car-rental-web-app/payment',
           element: <PaymentPage />,
         },
         {
-          path: '/account',
+          path: '/Car-rental-web-app/account/:userID',
+          id: 'user-details',
+          loader: userLoader,
           children: [
             {
               index: true,
@@ -55,35 +58,35 @@ function MyRoutes() {
               action: deleteUserAction,
             },
             {
-              path: '/account/reservationsHistory',
+              path: '/Car-rental-web-app/account/:userID/reservationsHistory',
               element: <ResHistoryPage />,
               action: deleteReservationAction,
             },
             {
-              path: '/account/loyalityCard',
+              path: '/Car-rental-web-app/account/:userID/loyalityCard',
               element: <LoyalityCardPage />,
             },
             {
-              path: '/account/changePersInfo',
+              path: '/Car-rental-web-app/account/:userID/changePersInfo',
               element: <ChangePersInfoPage />,
               action: changePersInfo,
             },
           ],
         },
         {
-          path: '/logout',
+          path: '/Car-rental-web-app/logout',
           action: logoutAction,
         },
         {
-          path: '/damages',
+          path: '/Car-rental-web-app/damages',
           element: <DamagesPage />,
         },
         {
-          path: '/thankYou',
+          path: '/Car-rental-web-app/thankYou',
           element: <ThankYouPage />,
         },
         {
-          path: '/aboutUs',
+          path: '/Car-rental-web-app/aboutUs',
           element: <AboutUsPage />,
         },
       ],

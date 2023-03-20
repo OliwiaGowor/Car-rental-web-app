@@ -16,8 +16,6 @@ export default function SignPage() {
 }
 
 export async function action({ request }) {
-  const searchParams = new URL(request.url).searchParams;
-  let mode = searchParams.get("mode") || "login";
   const method = request.method;
   const data = await request.formData();
 
@@ -41,7 +39,7 @@ export async function action({ request }) {
   });
 
   if (response.status === 422 || response.status === 400) {
-    alert('Samochód jest już zarezerwowany w wybranym terminie.');
+    alert('Coś poszło nie tak. Spróbuj ponownie.');
     return response;
   }
 

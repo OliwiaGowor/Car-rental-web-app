@@ -26,7 +26,7 @@ function LoginForm({ method }) {
             {isSubmitting ? "Logowanie..." : "Zaloguj się"}
           </button>
         </div>
-        <div className={classes.btnContainer}><Link to={'/sign'}>Nie masz jeszcze konta? Kliknij tu i zarejestruj się!</Link></div>
+        <div className={classes.btnContainer}><Link to={'/Car-rental-web-app/sign'}>Nie masz jeszcze konta? Kliknij tu i zarejestruj się!</Link></div>
       </Form>
     </div>
   );
