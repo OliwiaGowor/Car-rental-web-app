@@ -11,13 +11,13 @@ function PageNav() {
   return (
     <div className={classes.pageNav}>
       <div className={classes.container}>
-        <Link className={classes.logo} to="/">
+        <Link className={classes.logo} to="/Car-rental-web-app">
           <img className={classes.logoImg} src={logo} width="90px" height="65px" />
           <div className={classes.compName}>Januszex</div>
         </Link>
 
         <ul className={classes.middle}>
-          <li><Link to="/">Przeglądaj auta</Link></li>
+          <li><Link to="/Car-rental-web-app">Przeglądaj auta</Link></li>
           <li><Link to="/damages">Zgłoś usterkę</Link></li>
           <li><Link to="/aboutUs">O nas</Link></li>
         </ul>

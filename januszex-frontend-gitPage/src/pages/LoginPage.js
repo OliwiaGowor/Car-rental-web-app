@@ -46,5 +46,5 @@ export async function action({ request }) {
     }
 
     localStorage.setItem('ifLogged', true);
-    return redirect('/');
+    return redirect('/Car-rental-web-app');
 }

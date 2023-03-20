@@ -5,5 +5,5 @@ export function action() {
   //localStorage.removeItem('expiration');
   fetch('/logout')
   localStorage.removeItem('ifLogged');
-  return redirect('/');
+  return redirect('/Car-rental-web-app');
 }

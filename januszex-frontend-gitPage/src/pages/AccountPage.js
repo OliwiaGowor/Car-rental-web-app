@@ -78,5 +78,5 @@ export async function action({ params, request }) {
   localStorage.removeItem('ifLogged');
   alert('Usunięto konto');
 
-  return redirect('/');
+  return redirect('/Car-rental-web-app');
 }

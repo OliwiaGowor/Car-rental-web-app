@@ -22,7 +22,7 @@ function MyRoutes() {
 
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: '/Car-rental-web-app',
       element: <RootLayout />,
       id: 'root',
       loader: tokenLoader,
