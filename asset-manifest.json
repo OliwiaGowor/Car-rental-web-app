@@ -1,17 +1,15 @@
 {
   "files": {
-    "main.css": "/Car-rental-web-app/static/css/main.7712bca6.css",
-    "main.js": "/Car-rental-web-app/static/js/main.6ed9010e.js",
-    "static/js/787.37daf0ef.chunk.js": "/Car-rental-web-app/static/js/787.37daf0ef.chunk.js",
-    "static/media/logo.png": "/Car-rental-web-app/static/media/logo.ce63eda19f5b04f22902.png",
-    "static/media/account-icon.png": "/Car-rental-web-app/static/media/account-icon.8e84da02f88e9512b806.png",
-    "index.html": "/Car-rental-web-app/index.html",
-    "main.7712bca6.css.map": "/Car-rental-web-app/static/css/main.7712bca6.css.map",
-    "main.6ed9010e.js.map": "/Car-rental-web-app/static/js/main.6ed9010e.js.map",
-    "787.37daf0ef.chunk.js.map": "/Car-rental-web-app/static/js/787.37daf0ef.chunk.js.map"
+    "main.css": "/oliwiagowor/Car-rental-web-app/static/css/main.7712bca6.css",
+    "main.js": "/oliwiagowor/Car-rental-web-app/static/js/main.c2a1820c.js",
+    "static/media/logo.png": "/oliwiagowor/Car-rental-web-app/static/media/logo.ce63eda19f5b04f22902.png",
+    "static/media/account-icon.png": "/oliwiagowor/Car-rental-web-app/static/media/account-icon.8e84da02f88e9512b806.png",
+    "index.html": "/oliwiagowor/Car-rental-web-app/index.html",
+    "main.7712bca6.css.map": "/oliwiagowor/Car-rental-web-app/static/css/main.7712bca6.css.map",
+    "main.c2a1820c.js.map": "/oliwiagowor/Car-rental-web-app/static/js/main.c2a1820c.js.map"
   },
   "entrypoints": [
     "static/css/main.7712bca6.css",
-    "static/js/main.6ed9010e.js"
+    "static/js/main.c2a1820c.js"
   ]
 }
